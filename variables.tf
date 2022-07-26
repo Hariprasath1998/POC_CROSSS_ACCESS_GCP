@@ -26,11 +26,3 @@ variable "private_subnet_ip_cidr_range" {
   description = "IP CIDR range for the private subnet"
 }
 
-# APIs to be enabled
-variable "gcp_service_list" {
-  description = "The list of apis necessary for the project"
-  type        = list(string)
-  default = [
-    "compute.googleapis.com"
-  ]
-}

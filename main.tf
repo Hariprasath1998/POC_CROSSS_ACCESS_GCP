@@ -15,9 +15,3 @@ resource "google_compute_subnetwork" "private" {
   network       = google_compute_network.main.self_link
   private_ip_google_access = true
 }
-resource "google_project_service" "gcp_services" {
-  for_each = toset(var.gcp_service_list)
-  project  = var.project_id
-  service  = each.key
-  disable_on_destroy = false
-}
