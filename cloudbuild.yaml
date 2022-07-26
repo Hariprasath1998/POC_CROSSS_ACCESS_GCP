@@ -4,4 +4,5 @@ steps:
     entrypoint: 'sh'
     args: 
     - '-c'
+    - terraform init
     - terraform apply --auto-approve --var-file=dev.tfvars
